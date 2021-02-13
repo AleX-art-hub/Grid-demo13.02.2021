@@ -1,5 +1,11 @@
 body {
   margin: 0;
+  display: grid;
+  /* ASCII-gravika */
+  grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "nav footer aside";
 }
 
 .container {
@@ -12,13 +18,32 @@ body {
   /*grid-template-columns: 20% 1fr 150px;*/
 
   /* sokrashchenie zapisi*/
-  /*grid-template: 1fr 2fr / 1fr 2fr;*/
+  grid-template: 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr;
 
   /* visota strok v neyavnoy setke*/
   /*grid-auto-rows: 200px;*/
-
-  /* ASCII-gravika */
-  grid-area: "header headerheader" "nav main aside" "footer footer footer";
+  /*shirina strok v neyavnoy setke*/
+  /*grid-auto-columns: 200px;*/
+  grid-area: main;
+}
+header {
+  background-color: blue;
+  grid-area: header;
+}
+footer {
+  background-color: brown;
+  grid-area: footer;
+  /*grid-column: 2/3;*/
+}
+nav {
+  background-color: yellow;
+  grid-area: nav;
+  /*grid-row: 2/5;*/
+}
+aside {
+  background-color: aqua;
+  grid-area: aside;
+  /*grid-row: 2/5;*/
 }
 
 .gridItem {
@@ -26,7 +51,6 @@ body {
   margin: 10px;
 }
 #style1 {
-  background-color: red;
   grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row-end: 2;
 }
