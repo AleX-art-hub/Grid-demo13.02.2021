@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  background-color: gray;
+  /*r azbivka po strokam */
+  /*grid-template-rows: 30% 30% 30%;
+  
+  /* razbivka po stolbcam */
+  /*grid-template-columns: 20% 1fr 150px;*/
+
+  /* sokrashchenie zapisi*/
+  /*grid-template: 1fr 2fr / 1fr 2fr;*/
+
+  /* visota strok v neyavnoy setke*/
+  /*grid-auto-rows: 200px;*/
+
+  /* ASCII-gravika */
+  grid-area: "header headerheader" "nav main aside" "footer footer footer";
+}
+
+.gridItem {
+  background-color: purple;
+  margin: 10px;
+}
+#style1 {
+  background-color: red;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
