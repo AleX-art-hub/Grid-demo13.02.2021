@@ -5,7 +5,7 @@ body {
   grid-template-areas:
     "header header header"
     "nav main aside"
-    "nav footer aside";
+    "footer footer footer";
 }
 
 .container {
@@ -18,12 +18,21 @@ body {
   /*grid-template-columns: 20% 1fr 150px;*/
 
   /* sokrashchenie zapisi*/
-  grid-template: 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr;
+  /*grid-template: 1fr 1fr / 1fr 1fr;*/
 
+  /* kuda dobavlyaem yacheyki v neyavnoy setke*/
+  /*grid-auto-flow: column;*/
+  grid-template-columns: repeat(auto-fit, 100px);
   /* visota strok v neyavnoy setke*/
   /*grid-auto-rows: 200px;*/
-  /*shirina strok v neyavnoy setke*/
+  /*shirina stolbca v neyavnoy setke*/
   /*grid-auto-columns: 200px;*/
+  /*dense- pomeshchat element na svobodnoe mesto*/
+  /*grid-auto-flow: dense;
+  justify-items: end;
+  align-items: center;
+  justify-content: space-around;
+  align-content: start;*/
   grid-area: main;
 }
 header {
@@ -33,17 +42,14 @@ header {
 footer {
   background-color: brown;
   grid-area: footer;
-  /*grid-column: 2/3;*/
 }
 nav {
   background-color: yellow;
   grid-area: nav;
-  /*grid-row: 2/5;*/
 }
 aside {
   background-color: aqua;
   grid-area: aside;
-  /*grid-row: 2/5;*/
 }
 
 .gridItem {
@@ -51,6 +57,25 @@ aside {
   margin: 10px;
 }
 #style1 {
-  grid-row-start: 1;
-  grid-row-end: 2;
+  /*grid-row-start: 1;
+  grid-row-end: 2;*/
+  background-color: white;
+  height: 20px;
+}
+
+#style1:hover {
+  background-color: red;
+  transition: all ease 3s;
+  height: 40px;
+}
+.box {
+  background-color: blue;
+  width: 400px;
+  height: 200px;
+}
+.box:hover {
+  background-color: yellow;
+  transition: all ease 3s;
+  width: 500px;
+  height: 300px;
 }

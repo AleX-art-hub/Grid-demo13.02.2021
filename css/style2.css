@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  width: 1200px;
+  height: 90vh;
+  margin: 0 auto;
+  background-color: gray;
+  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+}
+
+.gridItem {
+  background-color: darkgray;
+  margin: 5px;
+}
+
+#style1 {
+  /*grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 4;
+  grid-column-end: 4;*/
+}
+#style2 {
+  /*grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;*/
+}
